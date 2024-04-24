@@ -1,2 +1,6 @@
 - melhorar a cor do background 
 - melhorar a cor da carta
+- e se eu colocar o background sendo uma das pnd do pokemon
+- fazer uma area de evolucao ?
+- deixar mais smooth a animacao/carregamento 
+- ver se na api aparece icones com tipos 
