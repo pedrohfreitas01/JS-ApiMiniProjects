@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: #566fff;
+}
+
+.container{
+    background-color: white;
+    width: 95vw;
+    font-size: 12px;
+    max-width: 46.25em;
+    padding: 6.5em 2.5em;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 0.6em;
+    box-shadow: 18px 17px 4px 0px rgba(0, 4, 52, 0.2);
+}
+
+.search-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container input, .container button {
+    font-size: 1.25em;
+    outline: none;
+    border: none;
+    border-radius: 0.4em;
+}
+
+.container input{
+    width: 40%;
+    border: 1px solid black;
+    padding: 0.6em;
+}
+
+.container button{
+    width: 55%;
+    background-color: #566fff;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 0.7em;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.container button:hover{
+    background-color: #3e4fb3;
+    opacity: 0.9;
+}
+
+#ran-ract-btn{
+    width: 100%;
+    margin-top: 1.5em;
+}
+
+.fact{
+    background-color: white;
+    box-shadow: 0 0 1.2 rgba(0, 4, 52, 0.2);
+    margin: 3em auto 0 auto;
+    padding: 2.8em 1.8em;
+    border-radius: 0.6em;
+    border: none;
+    border-bottom: 0.6em solid #566fff;
+    display: none;
+}
+
+.fact h2{
+    font-size: 2.8;
+    color: #181a34;
+}
+
+.fact p{
+    font-size: 1.15em;
+    font-weight: 400;
+    color: #566fff;
+    line-height: 1.8em;
+    text-align: justify;
+    margin-top: 0.8em;
+}
