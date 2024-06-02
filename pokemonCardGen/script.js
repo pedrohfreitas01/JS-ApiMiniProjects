@@ -1,3 +1,40 @@
+/**
+ bug: "#26de8l",
+dragon: "#ffeaa7",
+electric: "#fed330",
+fairy: "#FF0069",
+fighting: "#30336b",
+fire: "#f0932b",
+flying: "#8lecec",
+grass: "#00b894",
+ground: "#EFB549",
+ghost: "#a55eea",
+ice: "#74b9ff",
+normal: "#95afc0",
+poison: "#6c5ce7",
+psychic: "#a29bfe",
+rock: "#2d3436",
+water: "#0190FF
+ */
+
+const typeColor = {
+    bug: "#26de81",
+    dragon: "#ffeaa7",
+    electric: "#fed330",
+    fairy: "#FF0069",
+    fighting: "#30336b",
+    fire: "#f0932b",
+    flying: "#8lecec",
+    grass: "#00b894",
+    ground: "#EFB549",
+    ghost: "#a55eea",
+    ice: "#74b9ff",
+    normal: "#95afc0",
+    poison: "#6c5ce7",
+    psychic: "#a29bfe",
+    rock: "#2d3436",
+    water: "#0190FF"
+}
 const url = "https://pokeapi.co/api/v2/pokemon/"
 const card = document.getElementById("card")
 const btn = document.getElementById("btn")
@@ -26,6 +63,10 @@ let generateCard = (data) =>{
     const speed = data.stats[5].base_stat
     const imgSrc = data.sprites.other.showdown.front_default
     
+    //set theme color based on pokeType
+
+    const themeColor = typeColor[data.types[0].type.name]
+    console.log(themeColor);
     
     card.innerHTML = `
             <p class="hp">
@@ -55,6 +96,7 @@ let generateCard = (data) =>{
     `;
 
     appendTypes(data.types);
+    styleCard(themeColor)
 }
 
 let appendTypes = (types) => {
@@ -66,7 +108,14 @@ let appendTypes = (types) => {
 }
 
 
-
+let styleCard = (color) => {
+    card.style.background = `radial-gradient(
+        circle at 50% 0%, ${color} 36%, white 36%
+    )`;
+    card.querySelectorAll(".types span").forEach(typeColor => {
+        typeColor.style.backgroundColor = color
+    })
+}
 
 
 

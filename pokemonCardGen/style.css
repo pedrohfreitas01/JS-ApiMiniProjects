@@ -13,18 +13,53 @@ body{
 
 .container{
     width: 350px;
-    border: 1px solid black;
+    
     position: absolute;
     transform: translate(-50%,-50%);
     top: 50%;
     left: 50%;
 }
 
+.title-project{
+    text-align: center;
+    padding: 0px 3px;
+    margin-top: 30px;
+    font-size: 70px;
+}
+
+.title{
+    display: inline-block; 
+    max-width: fit-content; 
+    position: relative;
+}
+
+.title::after{
+    content: " ";
+    width: 0%;
+    height: 4px;
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 1s ease-in;
+}
+
+.title:hover::after{
+    width: 100%;
+
+}
+
+.pokeTitle{
+    color: #0062be;
+}
+
+.cardTitle{
+    color: #ffff33;
+}
+
 #card{
     position: relative;
-    background: radial-gradient(
-        circle at 50% 05, orange 46%, white 36%
-    );
+    
     width: 100%;
     padding: 30px 20px;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
@@ -70,6 +105,7 @@ body{
 
 .types span{
     padding: 5px 20px;
+    color: white;
 }
 
 .stats{
@@ -83,7 +119,7 @@ body{
     color: #404060;
 }
 
-#btn{
+#btn {
     display: block;
     padding: 15px 60px;
     font-size: 18px;
@@ -94,4 +130,36 @@ body{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 1s ;
+}
+
+#btn:hover {
+    background-color: #404060;
+    padding: 19px 66px;
+    font-size: 20px;
+    transition: 0.4s
+}
+
+.info-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999; 
+    margin-bottom: 20px;
+}
+
+#info-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #101010;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+#info-btn:hover {
+    background-color: #404060;
 }
