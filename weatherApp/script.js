@@ -1,9 +1,6 @@
-
 let result = document.getElementById("result")
 let searchBtn = document.getElementById("src-button")
 let cityRef = document.getElementById("city")
-let apiKey = "c5caaac70a98087b0c1bc85a3dd81f18"
-
 
 
 let getWeather = () =>{
