@@ -19,8 +19,17 @@
         <button id="btn">Generate</button>
     </div>
 
-    <div class="info-button">
-        <button id="info-btn">?</button>
+    <div onclick="openModal()" class="info-button">
+        <button id="info-btn" class="info-btn"></button>
+    </div>
+
+    <div class="modal-panel" id="modal-panel">
+        <div class="modal">
+            <button class="closeModal" id="close">X</button>
+            <h2>About PokeCard App</h2>
+            <p>To build this project i'm using the basic FrontEnd stack like: HTML5,Css3 and JavaScript ,i also  using the public<a href="https://pokeapi.co/" target="_blank"> PokeAPI</a> that provides me a RESTful API interface to highly detailed objects</p>
+            
+        </div>
     </div>
 
     <script src="script.js"></script>

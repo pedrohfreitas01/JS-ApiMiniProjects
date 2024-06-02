@@ -39,6 +39,7 @@ const url = "https://pokeapi.co/api/v2/pokemon/"
 const card = document.getElementById("card")
 const btn = document.getElementById("btn")
 
+
 let getPokeData = () => {
     // Generate a random number betwen 1 and 150
     let id = Math.floor(Math.random() * 150) + 1
@@ -107,7 +108,6 @@ let appendTypes = (types) => {
     })
 }
 
-
 let styleCard = (color) => {
     card.style.background = `radial-gradient(
         circle at 50% 0%, ${color} 36%, white 36%
@@ -119,6 +119,18 @@ let styleCard = (color) => {
 
 
 
+
+
+function openModal(){
+    const openModal = document.querySelector(".modal-panel")
+    openModal.classList.add('open')
+
+    openModal.addEventListener('click' , (event) =>{
+        if(event.target.id == 'close'|| event.target.id == 'modal-panel'){
+            openModal.classList.remove('open')
+        }
+    })
+}
 
 
 
